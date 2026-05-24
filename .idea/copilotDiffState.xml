@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/TestService (snapshot).java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/TestService (snapshot).java" />
+              <option name="originalContent" value="package me.hyowon.springbootdeveloper;&#10;&#10;import org.springframework.beans.factory.annotation.Autowired;&#10;import org.springframework.stereotype.Service;&#10;&#10;import java.util.List;&#10;&#10;@Service&#10;public class TestService {&#10;&#10;    @Autowired&#10;    MemberRepository memberReopsitory; // 빈 주입&#10;&#10;    public List&lt;Member&gt; getAllMembers() {&#10;        return memberReopsitory.findAll(); // 멤버 목록 얻기&#10;    }&#10;}&#10;" />
+              <option name="updatedContent" value="package me.hyowon.springbootdeveloper;&#10;&#10;import org.springframework.beans.factory.annotation.Autowired;&#10;import org.springframework.stereotype.Service;&#10;&#10;import java.util.List;&#10;&#10;@Service&#10;public class TestService {&#10;&#10;    @Autowired&#10;    MemberRepository memberRepository; // 빈 주입&#10;&#10;    public List&lt;Member&gt; getAllMembers() {&#10;        return memberRepository.findAll(); // 멤버 목록 얻기&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/application (snapshot).yml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/application (snapshot).yml" />
+              <option name="originalContent" value="spring:&#10;  jpa:&#10;    # 전송 쿼리 확인&#10;    show-sql: true&#10;    properties:&#10;      hibernate:&#10;        format_sql: true&#10;&#10;    # 테이블 생성 후에 data.sql 실행&#10;    defer-datasource-initialization: true&#10;" />
+              <option name="updatedContent" value="server:&#10;  port: 8081&#10;&#10;spring:&#10;  jpa:&#10;    # 전송 쿼리 확인&#10;    show-sql: true&#10;    properties:&#10;      hibernate:&#10;        format_sql: true&#10;&#10;    # 테이블 생성 후에 data.sql 실행&#10;    defer-datasource-initialization: true&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

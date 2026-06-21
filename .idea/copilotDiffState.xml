@@ -21,6 +21,15 @@
             </PendingDiffInfo>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/me/hyowon/springbootdeveloper/QuizController.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/me/hyowon/springbootdeveloper/QuizController.java" />
+              <option name="originalContent" value="package me.hyowon.springbootdeveloper;&#10;&#10;import org.aspectj.apache.bcel.classfile.Code;&#10;import org.springframework.http.ResponseEntity;&#10;import org.springframework.web.bind.annotation.*;&#10;&#10;@RestController&#10;public class QuizController {&#10;&#10;    @GetMapping(&quot;/quiz&quot;)&#10;    public ResponseEntity&lt;String&gt; quiz(@RequestParam(&quot;code&quot;) int code) {&#10;        switch (code) {&#10;            case 1:&#10;                return ResponseEntity.created(null).body(&quot;Created!&quot;);&#10;            case 2:&#10;                return ResponseEntity.badRequest().body(&quot;Bad Request!&quot;);&#10;            default:&#10;                return ResponseEntity.ok().body(&quot;OK!&quot;);&#10;        }&#10;    }&#10;&#10;    @PostMapping(&quot;/quiz&quot;)&#10;    public ResponseEntity&lt;String&gt; quiz2(@RequestBody Code code) {&#10;        switch (code.value()) {&#10;            case 1:&#10;                return ResponseEntity.status(403).body(&quot;Forbidden!&quot;);&#10;            default:&#10;                return ResponseEntity.ok().body(&quot;OK!&quot;);&#10;        }&#10;    }&#10;&#10;}&#10;&#10;record Code(int value) {}&#10;" />
+              <option name="updatedContent" value="package me.hyowon.springbootdeveloper;&#10;&#10;import org.springframework.http.ResponseEntity;&#10;import org.springframework.web.bind.annotation.*;&#10;&#10;@RestController&#10;public class QuizController {&#10;&#10;    @GetMapping(&quot;/quiz&quot;)&#10;    public ResponseEntity&lt;String&gt; quiz(@RequestParam(&quot;code&quot;) int code) {&#10;        switch (code) {&#10;            case 1:&#10;                return ResponseEntity.created(null).body(&quot;Created!&quot;);&#10;            case 2:&#10;                return ResponseEntity.badRequest().body(&quot;Bad Request!&quot;);&#10;            default:&#10;                return ResponseEntity.ok().body(&quot;OK!&quot;);&#10;        }&#10;    }&#10;&#10;    @PostMapping(&quot;/quiz&quot;)&#10;    public ResponseEntity&lt;String&gt; quiz2(@RequestBody Code code) {&#10;        switch (code.value()) {&#10;            case 1:&#10;                return ResponseEntity.status(403).body(&quot;Forbidden!&quot;);&#10;            default:&#10;                return ResponseEntity.ok().body(&quot;OK!&quot;);&#10;        }&#10;    }&#10;&#10;}&#10;&#10;record Code(int value) {}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

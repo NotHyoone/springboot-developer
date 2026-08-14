@@ -1,7 +1,16 @@
 server:
-  port: ${SERVER_PORT:8081}
+  port: ${SERVER_PORT:8080}
+  servlet:
+    encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
 
 spring:
+  sql:
+    init:
+      encoding: UTF-8
+
   jpa:
     # 전송 쿼리 확인
     show-sql: true
